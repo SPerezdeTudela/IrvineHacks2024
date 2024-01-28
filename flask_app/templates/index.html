@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>ASL Alphabet Detector</title>
+  </head>
+
+  <body background="{{ url_for('static', filename='bg.png') }}">
+    <div class="container">
+      <img src="{{ url_for('static', filename='Logo.png') }}" alt="ASL Detector Logo" class="centered-image" />
+    </div>
+    <div class="center">
+      <img id="bg" src="{{ url_for('video_feed') }}">
+    </div>
+  </body>
+</html>
