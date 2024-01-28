@@ -1,7 +1,6 @@
 import React from 'react';
 import Webcam from "react-webcam";
-import './logoCenter.css';
-import './camPlacement.css'
+import './style.css';
 import logo from './assets/Logo.png';
 
 function setBodyColor({color}) {
