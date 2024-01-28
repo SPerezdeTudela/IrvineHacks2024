@@ -1,26 +1,38 @@
-/*
+import React from 'react';
 import Webcam from "react-webcam";
-import { useRef } from "react";
+import './logoCenter.css';
+import './camPlacement.css'
+import logo from './assets/Logo.png';
 
-function App() {
-  const webRef = useRef(null);
+function setBodyColor({color}) {
+  document.documentElement.style.setProperty('--bodyColor', color)
+}
 
-  const captureScreenshot = () => {
-    const imageSrc = webRef.current.getScreenshot();
-    console.log(imageSrc); // This will log the base64 encoded string
-  };
-
+function Logo() {
   return (
-    <div className="App">
-      <Webcam
-        ref={webRef}
-      />
-      <button onClick={captureScreenshot}>Capture Screenshot</button>
+    <div className="container">
+      <img src={logo} alt="Logo" className="centered-image" />
     </div>
   );
 }
 
-export default App;
-*/
+function Camera() {
+  return (
+    <div className="webcam-container">
+      <p className="overlay-text">Camera</p>
+      <Webcam 
+        audio={false}
+      />
+    </div>
+  );
+}
 
-
+export default function App() {
+  setBodyColor({color: "#F5E6E8"})
+  return (
+    <div>
+      <Logo/>
+      <Camera/>
+    </div>
+  );
+}

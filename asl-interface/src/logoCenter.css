@@ -1,0 +1,12 @@
+.container {
+    background-color: #967AA1;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.centered-image {
+    width: 110px; 
+    height: auto;
+}
